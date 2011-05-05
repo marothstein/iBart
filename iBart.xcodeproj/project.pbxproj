@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F629E4171372ED430089AB8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E4161372ED430089AB8E /* UIKit.framework */; };
+		F629E4191372ED430089AB8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E4181372ED430089AB8E /* Foundation.framework */; };
+		F629E41B1372ED430089AB8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E41A1372ED430089AB8E /* CoreGraphics.framework */; };
+		F629E4211372ED430089AB8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F629E41F1372ED430089AB8E /* InfoPlist.strings */; };
+		F629E4241372ED430089AB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E4231372ED430089AB8E /* main.m */; };
+		F629E4271372ED430089AB8E /* iBartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E4261372ED430089AB8E /* iBartAppDelegate.m */; };
+		F629E42A1372ED430089AB8E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F629E4281372ED430089AB8E /* MainWindow.xib */; };
+		F629E42D1372ED430089AB8E /* iBartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E42C1372ED430089AB8E /* iBartViewController.m */; };
+		F629E4301372ED430089AB8E /* iBartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F629E42E1372ED430089AB8E /* iBartViewController.xib */; };
+		F629E4371372ED430089AB8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E4161372ED430089AB8E /* UIKit.framework */; };
+		F629E4381372ED430089AB8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E4181372ED430089AB8E /* Foundation.framework */; };
+		F629E4391372ED430089AB8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E41A1372ED430089AB8E /* CoreGraphics.framework */; };
+		F629E4411372ED430089AB8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F629E43F1372ED430089AB8E /* InfoPlist.strings */; };
+		F629E4441372ED430089AB8E /* iBartTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F629E4431372ED430089AB8E /* iBartTests.h */; };
+		F629E4461372ED430089AB8E /* iBartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E4451372ED430089AB8E /* iBartTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F629E43A1372ED430089AB8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F629E4091372ED430089AB8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F629E4111372ED430089AB8E;
+			remoteInfo = iBart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F629E4121372ED430089AB8E /* iBart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F629E4161372ED430089AB8E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F629E4181372ED430089AB8E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F629E41A1372ED430089AB8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F629E41E1372ED430089AB8E /* iBart-Info.plist */ = {isa = PBXFileReference; path = "iBart-Info.plist"; sourceTree = "<group>"; };
+		F629E4201372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F629E4221372ED430089AB8E /* iBart-Prefix.pch */ = {isa = PBXFileReference; path = "iBart-Prefix.pch"; sourceTree = "<group>"; };
+		F629E4231372ED430089AB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F629E4251372ED430089AB8E /* iBartAppDelegate.h */ = {isa = PBXFileReference; path = iBartAppDelegate.h; sourceTree = "<group>"; };
+		F629E4261372ED430089AB8E /* iBartAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBartAppDelegate.m; sourceTree = "<group>"; };
+		F629E4291372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F629E42B1372ED430089AB8E /* iBartViewController.h */ = {isa = PBXFileReference; path = iBartViewController.h; sourceTree = "<group>"; };
+		F629E42C1372ED430089AB8E /* iBartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBartViewController.m; sourceTree = "<group>"; };
+		F629E42F1372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/iBartViewController.xib; sourceTree = "<group>"; };
+		F629E4361372ED430089AB8E /* iBartTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBartTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F629E43E1372ED430089AB8E /* iBartTests-Info.plist */ = {isa = PBXFileReference; path = "iBartTests-Info.plist"; sourceTree = "<group>"; };
+		F629E4401372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F629E4421372ED430089AB8E /* iBartTests-Prefix.pch */ = {isa = PBXFileReference; path = "iBartTests-Prefix.pch"; sourceTree = "<group>"; };
+		F629E4431372ED430089AB8E /* iBartTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iBartTests.h; sourceTree = "<group>"; };
+		F629E4451372ED430089AB8E /* iBartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBartTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F629E40F1372ED430089AB8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F629E4171372ED430089AB8E /* UIKit.framework in Frameworks */,
+				F629E4191372ED430089AB8E /* Foundation.framework in Frameworks */,
+				F629E41B1372ED430089AB8E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F629E4321372ED430089AB8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F629E4371372ED430089AB8E /* UIKit.framework in Frameworks */,
+				F629E4381372ED430089AB8E /* Foundation.framework in Frameworks */,
+				F629E4391372ED430089AB8E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F629E4071372ED430089AB8E = {
+			isa = PBXGroup;
+			children = (
+				F629E41C1372ED430089AB8E /* iBart */,
+				F629E43C1372ED430089AB8E /* iBartTests */,
+				F629E4151372ED430089AB8E /* Frameworks */,
+				F629E4131372ED430089AB8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F629E4131372ED430089AB8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F629E4121372ED430089AB8E /* iBart.app */,
+				F629E4361372ED430089AB8E /* iBartTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F629E4151372ED430089AB8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F629E4161372ED430089AB8E /* UIKit.framework */,
+				F629E4181372ED430089AB8E /* Foundation.framework */,
+				F629E41A1372ED430089AB8E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F629E41C1372ED430089AB8E /* iBart */ = {
+			isa = PBXGroup;
+			children = (
+				F629E4251372ED430089AB8E /* iBartAppDelegate.h */,
+				F629E4261372ED430089AB8E /* iBartAppDelegate.m */,
+				F629E4281372ED430089AB8E /* MainWindow.xib */,
+				F629E42B1372ED430089AB8E /* iBartViewController.h */,
+				F629E42C1372ED430089AB8E /* iBartViewController.m */,
+				F629E42E1372ED430089AB8E /* iBartViewController.xib */,
+				F629E41D1372ED430089AB8E /* Supporting Files */,
+			);
+			path = iBart;
+			sourceTree = "<group>";
+		};
+		F629E41D1372ED430089AB8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F629E41E1372ED430089AB8E /* iBart-Info.plist */,
+				F629E41F1372ED430089AB8E /* InfoPlist.strings */,
+				F629E4221372ED430089AB8E /* iBart-Prefix.pch */,
+				F629E4231372ED430089AB8E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F629E43C1372ED430089AB8E /* iBartTests */ = {
+			isa = PBXGroup;
+			children = (
+				F629E4431372ED430089AB8E /* iBartTests.h */,
+				F629E4451372ED430089AB8E /* iBartTests.m */,
+				F629E43D1372ED430089AB8E /* Supporting Files */,
+			);
+			path = iBartTests;
+			sourceTree = "<group>";
+		};
+		F629E43D1372ED430089AB8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F629E43E1372ED430089AB8E /* iBartTests-Info.plist */,
+				F629E43F1372ED430089AB8E /* InfoPlist.strings */,
+				F629E4421372ED430089AB8E /* iBartTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F629E4111372ED430089AB8E /* iBart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F629E4491372ED430089AB8E /* Build configuration list for PBXNativeTarget "iBart" */;
+			buildPhases = (
+				F629E40E1372ED430089AB8E /* Sources */,
+				F629E40F1372ED430089AB8E /* Frameworks */,
+				F629E4101372ED430089AB8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iBart;
+			productName = iBart;
+			productReference = F629E4121372ED430089AB8E /* iBart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F629E4351372ED430089AB8E /* iBartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F629E44C1372ED430089AB8E /* Build configuration list for PBXNativeTarget "iBartTests" */;
+			buildPhases = (
+				F629E4311372ED430089AB8E /* Sources */,
+				F629E4321372ED430089AB8E /* Frameworks */,
+				F629E4331372ED430089AB8E /* Resources */,
+				F629E4341372ED430089AB8E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F629E43B1372ED430089AB8E /* PBXTargetDependency */,
+			);
+			name = iBartTests;
+			productName = iBartTests;
+			productReference = F629E4361372ED430089AB8E /* iBartTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F629E4091372ED430089AB8E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F629E40C1372ED430089AB8E /* Build configuration list for PBXProject "iBart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F629E4071372ED430089AB8E;
+			productRefGroup = F629E4131372ED430089AB8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F629E4111372ED430089AB8E /* iBart */,
+				F629E4351372ED430089AB8E /* iBartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F629E4101372ED430089AB8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F629E4211372ED430089AB8E /* InfoPlist.strings in Resources */,
+				F629E42A1372ED430089AB8E /* MainWindow.xib in Resources */,
+				F629E4301372ED430089AB8E /* iBartViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F629E4331372ED430089AB8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F629E4411372ED430089AB8E /* InfoPlist.strings in Resources */,
+				F629E4441372ED430089AB8E /* iBartTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F629E4341372ED430089AB8E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F629E40E1372ED430089AB8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F629E4241372ED430089AB8E /* main.m in Sources */,
+				F629E4271372ED430089AB8E /* iBartAppDelegate.m in Sources */,
+				F629E42D1372ED430089AB8E /* iBartViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F629E4311372ED430089AB8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F629E4461372ED430089AB8E /* iBartTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F629E43B1372ED430089AB8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F629E4111372ED430089AB8E /* iBart */;
+			targetProxy = F629E43A1372ED430089AB8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F629E41F1372ED430089AB8E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F629E4201372ED430089AB8E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F629E4281372ED430089AB8E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F629E4291372ED430089AB8E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F629E42E1372ED430089AB8E /* iBartViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F629E42F1372ED430089AB8E /* en */,
+			);
+			name = iBartViewController.xib;
+			sourceTree = "<group>";
+		};
+		F629E43F1372ED430089AB8E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F629E4401372ED430089AB8E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F629E4471372ED430089AB8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F629E4481372ED430089AB8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		F629E44A1372ED430089AB8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBart/iBart-Prefix.pch";
+				INFOPLIST_FILE = "iBart/iBart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F629E44B1372ED430089AB8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBart/iBart-Prefix.pch";
+				INFOPLIST_FILE = "iBart/iBart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F629E44D1372ED430089AB8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iBart.app/iBart";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBartTests/iBartTests-Prefix.pch";
+				INFOPLIST_FILE = "iBartTests/iBartTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F629E44E1372ED430089AB8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iBart.app/iBart";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBartTests/iBartTests-Prefix.pch";
+				INFOPLIST_FILE = "iBartTests/iBartTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F629E40C1372ED430089AB8E /* Build configuration list for PBXProject "iBart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F629E4471372ED430089AB8E /* Debug */,
+				F629E4481372ED430089AB8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F629E4491372ED430089AB8E /* Build configuration list for PBXNativeTarget "iBart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F629E44A1372ED430089AB8E /* Debug */,
+				F629E44B1372ED430089AB8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F629E44C1372ED430089AB8E /* Build configuration list for PBXNativeTarget "iBartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F629E44D1372ED430089AB8E /* Debug */,
+				F629E44E1372ED430089AB8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F629E4091372ED430089AB8E /* Project object */;
+}
