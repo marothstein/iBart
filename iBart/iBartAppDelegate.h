@@ -7,15 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebViewController.h"
 
 @class iBartViewController;
 
 @interface iBartAppDelegate : NSObject <UIApplicationDelegate> {
+    
+    UIWindow *window;
+    WebViewController *webViewController;
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet WebViewController *webViewController;
 
-@property (nonatomic, retain) IBOutlet iBartViewController *viewController;
+- (NSString *)documentPathForFile:(NSString *)aPath;
+- (NSString *)bundlePathForRessource:(NSString *)aRessource ofType:(NSString *)aType;
+
 
 @end

@@ -14,11 +14,4 @@
     WebViewController *webViewController;
 }
 
-
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet WebViewController *webViewController;
-
-- (NSString *)documentPathForFile:(NSString *)aPath;
-- (NSString *)bundlePathForRessource:(NSString *)aRessource ofType:(NSString *)aType;
-
 @end

@@ -15,13 +15,13 @@
 
 @synthesize window=_window;
 
-@synthesize viewController=_viewController;
+@synthesize webViewController=_webViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
      
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = self.webViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -68,7 +68,7 @@
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_webViewController release];
     [super dealloc];
 }
 
