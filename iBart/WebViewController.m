@@ -7,7 +7,7 @@
 //
 
 #import "WebViewController.h"
-#import "WebTouchAppDelegate.h"
+#import "iBartAppDelegate.h"
 #import "JSON.h"
 
 @implementation WebViewController
@@ -23,7 +23,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         if (!self.appDelegate) {
-			self.appDelegate = (WebTouchAppDelegate *)[[UIApplication sharedApplication]delegate];
+			self.appDelegate = (iBartAppDelegate *)[[UIApplication sharedApplication]delegate];
 		}
 		
 //        self.webView.inputAccessoryView = self.accessoryView;
@@ -44,7 +44,7 @@
 //                                            name:UIKeyboardWillShowNotification
 //                                            object:nil];    
     
-	self.navigationItem.title = @"Fever";
+	self.navigationItem.title = @"iBart";
 	
 	NSMutableDictionary *jsonDict = [NSMutableDictionary dictionaryWithCapacity:0];
 

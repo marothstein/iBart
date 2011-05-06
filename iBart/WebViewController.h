@@ -8,20 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@class WebTouchAppDelegate;
+@class iBartAppDelegate;
 
 @interface WebViewController : UIViewController {
 	UIWebView *_webView;
     UIView *_accessoryView;
 	BOOL _webViewLoaded;
-	WebTouchAppDelegate *_appDelegate;
+	iBartAppDelegate *_appDelegate;
 	NSString *_jsonString;
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, retain) IBOutlet UIView *accessoryView;
 @property (nonatomic) BOOL webViewLoaded;
-@property (nonatomic, retain) WebTouchAppDelegate *appDelegate;
+@property (nonatomic, retain) iBartAppDelegate *appDelegate;
 @property (nonatomic, copy) NSString *jsonString;
 
 - (void)populateJsonAndDeliverfromDict:(NSDictionary *)jsonDict;
