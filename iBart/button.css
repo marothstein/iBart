@@ -1,0 +1,28 @@
+/* Debug Button Styles
+   Author: Matthew Rothstein
+*/
+
+.debug {
+	
+}
+
+.tappable { 
+	border: 1px gray solid; 
+	
+	background-color: white;
+}
+
+.unset {
+	background-image: url(../images/fever.gif);
+}
+
+.true {
+	background-image: url(../images/fever-circled.gif);
+}
+
+.false {
+	
+	background-image: url(../images/fever-crossout.gif);
+	
+}
+

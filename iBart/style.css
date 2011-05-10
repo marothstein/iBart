@@ -86,15 +86,96 @@ button {  width: auto; overflow: visible; }
     Author: Matthew Rothstein
  */
 
+
+body {
+	padding: 50px; 
+	
+	padding-top: 50px;
+	
+	font-size: 10px;
+	
+	height: 800px; 
+	overflow: hidden;
+	
+	border: 1px red solid;
+}
+
+#main section {
+	margin-bottom: 40px;
+	
+	border: 2px solid gray;
+	border-radius: 0px;
+	
+	/*
+	padding: 20px; 
+	padding-top: 10px;
+	*/
+	
+	float: left;
+}
+
+/* padding from here done in ems */
+#main section h1 { 
+	margin-bottom: 5px;
+	
+	font-size: 1.4em;
+	text-indent: 10px;
+	
+	color: black;
+	
+	background-color: lightblue;
+	
+	border-bottom: 1px darkgray solid;
+}
+
+#main section fieldset {
+	margin-bottom: 1em;
+}
+
+#main section .field,
+#main section .field_label {
+	font-size: 1.3em;
+}
+
+#main section .field_title,
+#main section .element_title {
+	font-size: 1.3em;
+}
+
+#main section .field[type=button] { 
+	min-width: 50px 
+	height: 35px; 
+	
+	border: 1px gray solid;
+	background-color: white;
+	
+	border-radius: 10px;
+
+}
+
+
+
+ /* Audit Styles
+    Author: Matthew Rothstein
+ */
 #audit_container {
 	float: right; 
+	
+	position: relative;
+	top: -10px;
 	
 	padding: 20px;
 	
 	width: 400px;
 	margin-right: 20%;
 	
+	min-height: 300px;
+	
+	overflow: auto;
+	
 	border: 2px darkgray solid;
+	
+	display: none;
 }
 
 #audit_container h2 {
@@ -112,21 +193,114 @@ button {  width: auto; overflow: visible; }
 	
 	border-bottom: 1px darkgray solid;
 }
-
+#audit_container .audit_item .audit_item_row_title,
 #audit_container .audit_item .event_type_title,
-#audit_container .audit_item .event_target_title,
+#audit_container .audit_item .event_target_id_title,
+#audit_container .audit_item .event_target_class_title,
 #audit_container .audit_item .audit_data_title { font-weight: bold; }
 
 
+/* Location Picture Styles
+   Author: Matthew Rothstein
+*/
+#main section.location h1 {
+	margin-bottom: 0;
+}
+
+.location img {
+	position: relative;
+}
+
+.location div {
+	position: relative;
+}
+
+#location_hit_table {
+	position: absolute;
+	
+	width: 100%;
+	height: 100%;
+	
+	top: 0;
+	left: 0;
+}
+
+.hit_point {
+	border: 0px red solid;
+	
+	height: 30px;
+}
+
+.markable { 
+	/*background-color: rgba( 123,123,123, 0.3); */
+}
+
+.marked {
+	/*background-color: blue;*/
+	opacity: 0.6;
+	background: no-repeat url(dot.png) center;
+}
 
 
+/* Debug Styles
+   Author: Matthew Rothstein
+*/
+
+.debug { font-size: 5em; }
 
 
+/* Interaction Styles
+   Author: Matthew Rothstein
+*/
+.tappable_wrapper { display: inline; }
 
+.tappable {
+	display: inline-block; 
+	border: 0px solid gray; background-color: white;  font-size: 1.3em !important; width: 70px; text-align: center;
+	padding-top: 2px; padding-bottom: 2px; 
+	
+	border: 0px lightgray solid;
+	border-radius: 10px;
+	
 
+}
 
+.tapped { border: 3px solid green; /*background-color: green;*/ border-radius: 10px; }
 
+.swiped { /*border: 3px solid red; background-color: red; */  text-decoration: line-through; color: red; }
 
+.section_row { margin-bottom: 5px; }
+
+.field_title { font-weight: bold; }
+
+/* Section Positioning Styles 
+
+*/
+header { position: relative; top: 220px; left: 750px; }
+header h1 { font-size: 1.5em; }
+header h2 span {  display: block; }
+section { position: absolute; padding: 0px; }
+.onset { top: 0px; left: 0px; width: 355px;  padding-bottom: 5px; }
+.severity { top: 155px; left: 0px;  width: 355px;}
+.course_and_timing { top: 260px; left: 0px; width: 355px; }
+.location { top: 000px; left: 358px; }
+.location img {
+	height: 220px;
+}
+.relieved_by { top: 0px; left: 517px; }
+.quality { top: 75px; left: 517px; }
+.exacerbated_by { top: 150px; left: 517px; }
+.associated_symptoms { top: 0px; left: 730px; height: 240px; }
+.associated_symptoms .field { width: 90px; }
+
+.context { top: 240px; left: 358px; width: 640px; }
+.context textarea { width: 630px; }
+
+/* DEBUG STYLES */
+#test_button { /*text-indent: -9999px;*/ content: "test button!"; }
+
+#audit_container { }
+#audit_container p { border: 1px red solid; border-bottom: 1px green solid; }
 
 @media all and (orientation:portrait) { 
   
