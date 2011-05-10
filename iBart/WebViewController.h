@@ -11,11 +11,11 @@
 @class iBartAppDelegate;
 
 @interface WebViewController : UIViewController {
-	UIWebView *_webView;
-    UIView *_accessoryView;
-	BOOL _webViewLoaded;
-	iBartAppDelegate *_appDelegate;
-	NSString *_jsonString;
+	UIWebView *webView;
+    UIView *accessoryView;
+	BOOL webViewLoaded;
+	iBartAppDelegate *appDelegate;
+	NSString *jsonString;
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;

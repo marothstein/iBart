@@ -22,7 +22,7 @@
 @property (nonatomic, retain) IBOutlet WebViewController *webViewController;
 
 - (NSString *)documentPathForFile:(NSString *)aPath;
-- (NSString *)bundlePathForRessource:(NSString *)aRessource ofType:(NSString *)aType;
+- (NSString *)bundlePathForResource:(NSString *)aResource ofType:(NSString *)aType;
 
 
 @end

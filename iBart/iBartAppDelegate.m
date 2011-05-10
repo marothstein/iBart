@@ -13,15 +13,17 @@
 @implementation iBartAppDelegate
 
 
-@synthesize window=_window;
+@synthesize window=window;
 
-@synthesize webViewController=_webViewController;
+@synthesize webViewController=webViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.webViewController;
+    webViewController = [ [WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
+    
+    [window addSubview: [webViewController view] ];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -65,10 +67,39 @@
      */
 }
 
+#pragma mark -
+#pragma mark Utilities method to help find ressources from the applications directory or from the user directory:
+
+// Permits to retrieve the path for the given file on the user documents dir
+- (NSString *)documentPathForFile:(NSString *)aPath
+{
+    NSLog( @"----> IN documentPathForFile: \n\n");
+    
+    
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *appFile = [documentsDirectory stringByAppendingPathComponent:aPath];
+	return appFile;
+}
+
+// Permits to retreive the path for the given file on the application resources dir
+- (NSString *)bundlePathForResource:(NSString *)aResource ofType:(NSString *)aType
+{
+    
+    NSLog( @"----> IN bundlePathForRessource: \n\n");
+    NSLog( @"----> IN aResource: %@ \n\n", aResource );
+    NSLog( @"----> IN aType: %@ \n\n", aType );
+    
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSString *path = [bundle pathForResource:aResource ofType:aType];
+	return path;
+}
+
+
 - (void)dealloc
 {
-    [_window release];
-    [_webViewController release];
+    [window release];
+    [webViewController release];
     [super dealloc];
 }
 
