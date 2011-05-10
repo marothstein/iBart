@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F622AD2A137828ED00B21AF9 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F622AD29137828EC00B21AF9 /* WebViewController.xib */; };
+		F622AE441379926900B21AF9 /* bigguy.png in Resources */ = {isa = PBXBuildFile; fileRef = F622AE371379926900B21AF9 /* bigguy.png */; };
+		F622AE451379926900B21AF9 /* bigguy2.png in Resources */ = {isa = PBXBuildFile; fileRef = F622AE381379926900B21AF9 /* bigguy2.png */; };
+		F622AE461379926900B21AF9 /* button.css in Resources */ = {isa = PBXBuildFile; fileRef = F622AE391379926900B21AF9 /* button.css */; };
+		F622AE471379926900B21AF9 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = F622AE3A1379926900B21AF9 /* dot.png */; };
+		F622AE481379926900B21AF9 /* google.fastbutton.js in Sources */ = {isa = PBXBuildFile; fileRef = F622AE3B1379926900B21AF9 /* google.fastbutton.js */; };
+		F622AE491379926900B21AF9 /* handheld.css in Resources */ = {isa = PBXBuildFile; fileRef = F622AE3C1379926900B21AF9 /* handheld.css */; };
+		F622AE4A1379926900B21AF9 /* HPI.html in Resources */ = {isa = PBXBuildFile; fileRef = F622AE3D1379926900B21AF9 /* HPI.html */; };
+		F622AE4B1379926900B21AF9 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F622AE3E1379926900B21AF9 /* index.html */; };
+		F622AE4C1379926900B21AF9 /* jquery-1.5.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = F622AE3F1379926900B21AF9 /* jquery-1.5.2.min.js */; };
+		F622AE4D1379926900B21AF9 /* jquery.mobile-1.0a4.min.js in Sources */ = {isa = PBXBuildFile; fileRef = F622AE401379926900B21AF9 /* jquery.mobile-1.0a4.min.js */; };
+		F622AE4E1379926900B21AF9 /* script.js in Sources */ = {isa = PBXBuildFile; fileRef = F622AE411379926900B21AF9 /* script.js */; };
+		F622AE4F1379926900B21AF9 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = F622AE421379926900B21AF9 /* style.css */; };
+		F622AE501379926900B21AF9 /* theguy.png in Resources */ = {isa = PBXBuildFile; fileRef = F622AE431379926900B21AF9 /* theguy.png */; };
 		F629E4171372ED430089AB8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E4161372ED430089AB8E /* UIKit.framework */; };
 		F629E4191372ED430089AB8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E4181372ED430089AB8E /* Foundation.framework */; };
 		F629E41B1372ED430089AB8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629E41A1372ED430089AB8E /* CoreGraphics.framework */; };
@@ -22,6 +36,10 @@
 		F629E4411372ED430089AB8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F629E43F1372ED430089AB8E /* InfoPlist.strings */; };
 		F629E4441372ED430089AB8E /* iBartTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F629E4431372ED430089AB8E /* iBartTests.h */; };
 		F629E4461372ED430089AB8E /* iBartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E4451372ED430089AB8E /* iBartTests.m */; };
+		F629E45B1372EDA40089AB8E /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E4521372EDA40089AB8E /* NSObject+SBJSON.m */; };
+		F629E45C1372EDA40089AB8E /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E4541372EDA40089AB8E /* NSString+SBJSON.m */; };
+		F629E45D1372EDA40089AB8E /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E4561372EDA40089AB8E /* SBJSON.m */; };
+		F629E45F1372EDA40089AB8E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F629E45A1372EDA40089AB8E /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,26 +53,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F622AD29137828EC00B21AF9 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		F622AE371379926900B21AF9 /* bigguy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigguy.png; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/bigguy.png; sourceTree = "<group>"; };
+		F622AE381379926900B21AF9 /* bigguy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigguy2.png; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/bigguy2.png; sourceTree = "<group>"; };
+		F622AE391379926900B21AF9 /* button.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = button.css; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/button.css; sourceTree = "<group>"; };
+		F622AE3A1379926900B21AF9 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot.png; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/dot.png; sourceTree = "<group>"; };
+		F622AE3B1379926900B21AF9 /* google.fastbutton.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = google.fastbutton.js; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/google.fastbutton.js; sourceTree = "<group>"; };
+		F622AE3C1379926900B21AF9 /* handheld.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = handheld.css; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/handheld.css; sourceTree = "<group>"; };
+		F622AE3D1379926900B21AF9 /* HPI.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = HPI.html; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/HPI.html; sourceTree = "<group>"; };
+		F622AE3E1379926900B21AF9 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/index.html; sourceTree = "<group>"; };
+		F622AE3F1379926900B21AF9 /* jquery-1.5.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.5.2.min.js"; path = "../../../../../Sites/com/bartcharts/tap_and_swipe_flat/jquery-1.5.2.min.js"; sourceTree = "<group>"; };
+		F622AE401379926900B21AF9 /* jquery.mobile-1.0a4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery.mobile-1.0a4.min.js"; path = "../../../../../Sites/com/bartcharts/tap_and_swipe_flat/jquery.mobile-1.0a4.min.js"; sourceTree = "<group>"; };
+		F622AE411379926900B21AF9 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = script.js; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/script.js; sourceTree = "<group>"; };
+		F622AE421379926900B21AF9 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/style.css; sourceTree = "<group>"; };
+		F622AE431379926900B21AF9 /* theguy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = theguy.png; path = ../../../../../Sites/com/bartcharts/tap_and_swipe_flat/theguy.png; sourceTree = "<group>"; };
 		F629E4121372ED430089AB8E /* iBart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629E4161372ED430089AB8E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F629E4181372ED430089AB8E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F629E41A1372ED430089AB8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F629E41E1372ED430089AB8E /* iBart-Info.plist */ = {isa = PBXFileReference; path = "iBart-Info.plist"; sourceTree = "<group>"; };
+		F629E41E1372ED430089AB8E /* iBart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iBart-Info.plist"; sourceTree = "<group>"; };
 		F629E4201372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F629E4221372ED430089AB8E /* iBart-Prefix.pch */ = {isa = PBXFileReference; path = "iBart-Prefix.pch"; sourceTree = "<group>"; };
+		F629E4221372ED430089AB8E /* iBart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iBart-Prefix.pch"; sourceTree = "<group>"; };
 		F629E4231372ED430089AB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F629E4251372ED430089AB8E /* iBartAppDelegate.h */ = {isa = PBXFileReference; path = iBartAppDelegate.h; sourceTree = "<group>"; };
+		F629E4251372ED430089AB8E /* iBartAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iBartAppDelegate.h; sourceTree = "<group>"; };
 		F629E4261372ED430089AB8E /* iBartAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBartAppDelegate.m; sourceTree = "<group>"; };
 		F629E4291372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		F629E42B1372ED430089AB8E /* iBartViewController.h */ = {isa = PBXFileReference; path = iBartViewController.h; sourceTree = "<group>"; };
+		F629E42B1372ED430089AB8E /* iBartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iBartViewController.h; sourceTree = "<group>"; };
 		F629E42C1372ED430089AB8E /* iBartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBartViewController.m; sourceTree = "<group>"; };
 		F629E42F1372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/iBartViewController.xib; sourceTree = "<group>"; };
 		F629E4361372ED430089AB8E /* iBartTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBartTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F629E43E1372ED430089AB8E /* iBartTests-Info.plist */ = {isa = PBXFileReference; path = "iBartTests-Info.plist"; sourceTree = "<group>"; };
+		F629E43E1372ED430089AB8E /* iBartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iBartTests-Info.plist"; sourceTree = "<group>"; };
 		F629E4401372ED430089AB8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F629E4421372ED430089AB8E /* iBartTests-Prefix.pch */ = {isa = PBXFileReference; path = "iBartTests-Prefix.pch"; sourceTree = "<group>"; };
+		F629E4421372ED430089AB8E /* iBartTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iBartTests-Prefix.pch"; sourceTree = "<group>"; };
 		F629E4431372ED430089AB8E /* iBartTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iBartTests.h; sourceTree = "<group>"; };
 		F629E4451372ED430089AB8E /* iBartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBartTests.m; sourceTree = "<group>"; };
+		F629E4501372EDA40089AB8E /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F629E4511372EDA40089AB8E /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		F629E4521372EDA40089AB8E /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		F629E4531372EDA40089AB8E /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		F629E4541372EDA40089AB8E /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		F629E4551372EDA40089AB8E /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		F629E4561372EDA40089AB8E /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		F629E4591372EDA40089AB8E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		F629E45A1372EDA40089AB8E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +125,7 @@
 		F629E4071372ED430089AB8E = {
 			isa = PBXGroup;
 			children = (
+				F629E4611372EE550089AB8E /* Resources */,
 				F629E41C1372ED430089AB8E /* iBart */,
 				F629E43C1372ED430089AB8E /* iBartTests */,
 				F629E4151372ED430089AB8E /* Frameworks */,
@@ -113,13 +155,13 @@
 		F629E41C1372ED430089AB8E /* iBart */ = {
 			isa = PBXGroup;
 			children = (
+				F629E4591372EDA40089AB8E /* WebViewController.h */,
+				F629E45A1372EDA40089AB8E /* WebViewController.m */,
 				F629E4251372ED430089AB8E /* iBartAppDelegate.h */,
 				F629E4261372ED430089AB8E /* iBartAppDelegate.m */,
-				F629E4281372ED430089AB8E /* MainWindow.xib */,
 				F629E42B1372ED430089AB8E /* iBartViewController.h */,
 				F629E42C1372ED430089AB8E /* iBartViewController.m */,
-				F629E42E1372ED430089AB8E /* iBartViewController.xib */,
-				F629E41D1372ED430089AB8E /* Supporting Files */,
+				F629E4601372EDAB0089AB8E /* JSON */,
 			);
 			path = iBart;
 			sourceTree = "<group>";
@@ -133,6 +175,7 @@
 				F629E4231372ED430089AB8E /* main.m */,
 			);
 			name = "Supporting Files";
+			path = iBart;
 			sourceTree = "<group>";
 		};
 		F629E43C1372ED430089AB8E /* iBartTests */ = {
@@ -153,6 +196,53 @@
 				F629E4421372ED430089AB8E /* iBartTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F629E4601372EDAB0089AB8E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F629E4501372EDA40089AB8E /* JSON.h */,
+				F629E4511372EDA40089AB8E /* NSObject+SBJSON.h */,
+				F629E4521372EDA40089AB8E /* NSObject+SBJSON.m */,
+				F629E4531372EDA40089AB8E /* NSString+SBJSON.h */,
+				F629E4541372EDA40089AB8E /* NSString+SBJSON.m */,
+				F629E4551372EDA40089AB8E /* SBJSON.h */,
+				F629E4561372EDA40089AB8E /* SBJSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		F629E4611372EE550089AB8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F629E48A1372EFCC0089AB8E /* HTML */,
+				F629E41D1372ED430089AB8E /* Supporting Files */,
+				F629E4281372ED430089AB8E /* MainWindow.xib */,
+				F629E42E1372ED430089AB8E /* iBartViewController.xib */,
+				F622AD29137828EC00B21AF9 /* WebViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F629E48A1372EFCC0089AB8E /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				F622AE371379926900B21AF9 /* bigguy.png */,
+				F622AE381379926900B21AF9 /* bigguy2.png */,
+				F622AE391379926900B21AF9 /* button.css */,
+				F622AE3A1379926900B21AF9 /* dot.png */,
+				F622AE3B1379926900B21AF9 /* google.fastbutton.js */,
+				F622AE3C1379926900B21AF9 /* handheld.css */,
+				F622AE3D1379926900B21AF9 /* HPI.html */,
+				F622AE3E1379926900B21AF9 /* index.html */,
+				F622AE3F1379926900B21AF9 /* jquery-1.5.2.min.js */,
+				F622AE401379926900B21AF9 /* jquery.mobile-1.0a4.min.js */,
+				F622AE411379926900B21AF9 /* script.js */,
+				F622AE421379926900B21AF9 /* style.css */,
+				F622AE431379926900B21AF9 /* theguy.png */,
+			);
+			name = HTML;
+			path = iBart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +315,16 @@
 				F629E4211372ED430089AB8E /* InfoPlist.strings in Resources */,
 				F629E42A1372ED430089AB8E /* MainWindow.xib in Resources */,
 				F629E4301372ED430089AB8E /* iBartViewController.xib in Resources */,
+				F622AD2A137828ED00B21AF9 /* WebViewController.xib in Resources */,
+				F622AE441379926900B21AF9 /* bigguy.png in Resources */,
+				F622AE451379926900B21AF9 /* bigguy2.png in Resources */,
+				F622AE461379926900B21AF9 /* button.css in Resources */,
+				F622AE471379926900B21AF9 /* dot.png in Resources */,
+				F622AE491379926900B21AF9 /* handheld.css in Resources */,
+				F622AE4A1379926900B21AF9 /* HPI.html in Resources */,
+				F622AE4B1379926900B21AF9 /* index.html in Resources */,
+				F622AE4F1379926900B21AF9 /* style.css in Resources */,
+				F622AE501379926900B21AF9 /* theguy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +363,14 @@
 				F629E4241372ED430089AB8E /* main.m in Sources */,
 				F629E4271372ED430089AB8E /* iBartAppDelegate.m in Sources */,
 				F629E42D1372ED430089AB8E /* iBartViewController.m in Sources */,
+				F629E45B1372EDA40089AB8E /* NSObject+SBJSON.m in Sources */,
+				F629E45C1372EDA40089AB8E /* NSString+SBJSON.m in Sources */,
+				F629E45D1372EDA40089AB8E /* SBJSON.m in Sources */,
+				F629E45F1372EDA40089AB8E /* WebViewController.m in Sources */,
+				F622AE481379926900B21AF9 /* google.fastbutton.js in Sources */,
+				F622AE4C1379926900B21AF9 /* jquery-1.5.2.min.js in Sources */,
+				F622AE4D1379926900B21AF9 /* jquery.mobile-1.0a4.min.js in Sources */,
+				F622AE4E1379926900B21AF9 /* script.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +407,7 @@
 				F629E4291372ED430089AB8E /* en */,
 			);
 			name = MainWindow.xib;
+			path = iBart;
 			sourceTree = "<group>";
 		};
 		F629E42E1372ED430089AB8E /* iBartViewController.xib */ = {
@@ -307,6 +416,7 @@
 				F629E42F1372ED430089AB8E /* en */,
 			);
 			name = iBartViewController.xib;
+			path = iBart;
 			sourceTree = "<group>";
 		};
 		F629E43F1372ED430089AB8E /* InfoPlist.strings */ = {
@@ -447,6 +557,7 @@
 				F629E44B1372ED430089AB8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F629E44C1372ED430089AB8E /* Build configuration list for PBXNativeTarget "iBartTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +566,7 @@
 				F629E44E1372ED430089AB8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
