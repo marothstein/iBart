@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WebViewController.h"
 
-@class iBartViewController;
+@class WebViewController;
 
 @interface iBartAppDelegate : NSObject <UIApplicationDelegate> {
     

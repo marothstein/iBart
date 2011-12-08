@@ -7,23 +7,38 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InputViewController.h"
 
 @class iBartAppDelegate;
 
-@interface WebViewController : UIViewController {
+//@class InputViewController;
+
+
+
+@interface WebViewController : UIViewController<InputViewControllerDelegate> {
 	UIWebView *webView;
-    UIView *accessoryView;
-	BOOL webViewLoaded;
+	InputViewController *inputViewController;
+    BOOL webViewLoaded;
 	iBartAppDelegate *appDelegate;
 	NSString *jsonString;
+    
+    BOOL userIsInputting;
+//    UIView *inputView;
 }
 
+@property (readwrite, retain) UIView *inputView;
+
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) IBOutlet UIView *accessoryView;
+@property (nonatomic, retain) IBOutlet InputViewController *inputViewController;
+
 @property (nonatomic) BOOL webViewLoaded;
+@property (nonatomic) BOOL userIsInputting;
+
 @property (nonatomic, retain) iBartAppDelegate *appDelegate;
 @property (nonatomic, copy) NSString *jsonString;
 
-- (void)populateJsonAndDeliverfromDict:(NSDictionary *)jsonDict;
+- (void)runJavascriptFunctionOnPage:(NSString *)jsString;
 
 @end
+
+

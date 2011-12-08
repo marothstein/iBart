@@ -7,21 +7,42 @@
 //
 
 #import "iBartAppDelegate.h"
+#import "WebViewController.h"
 
-#import "iBartViewController.h"
+#import "NUSASession.h"
 
 @implementation iBartAppDelegate
 
 
-@synthesize window=window;
+@synthesize window;
+@synthesize webViewController;
 
-@synthesize webViewController=webViewController;
+// I don't know exactly what this needs to be, so I'll leave it as the default
+#define kMyApplicationName	@"iBart"
+
+// Convenience defines used for opening the NUSASession instance and pass it the licensing 
+// information needed. Partner and License GUIDs will be made available to you via the 
+// Nuance order desk. 
+#define kMyPartnerGuid		@"ba2b102a-be8d-44fe-ba38-7e72766629b9"
+#define kMyLicenseGuid		@"9E84F602-8DB1-4160-9650-B5C51161F61C"
+
+#define userName            @"matt"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    ////////////////////////////////////////////////////////////////////////
+    // BEGIN NUANCE SESSION SETUP
+    ////////////////////////////////////////////////////////////////////////
+    NSLog( @" (APP DELEGATE) [NUANCE] Attempting to start session" );
+    [[NUSASession sharedSession] openForApplication: kMyApplicationName partnerGuid: kMyPartnerGuid licenseGuid: kMyLicenseGuid userId: userName]; 
+    NSLog( @" (APP DELEGATE) [NUANCE]Session started successfully" );
+    ////////////////////////////////////////////////////////////////////////
+    // END NUANCE SESSION SETUP
+    ////////////////////////////////////////////////////////////////////////
+    
     // Override point for customization after application launch.
     webViewController = [ [WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
-    
     [window addSubview: [webViewController view] ];
     
     [self.window makeKeyAndVisible];

@@ -7,17 +7,23 @@
 //
 
 #import "WebViewController.h"
+
+#import "InputViewController.h"
 #import "iBartAppDelegate.h"
 #import "JSON.h"
 
 @implementation WebViewController
 
 @synthesize webView;
-@synthesize accessoryView;
+@synthesize inputViewController;
 
 @synthesize webViewLoaded;
 @synthesize appDelegate;
 @synthesize jsonString;
+
+@synthesize inputView;
+
+@synthesize userIsInputting;
 
 // Override initWithNibName:bundle: to load the view using a nib file then perform additional customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -29,6 +35,15 @@
         
         // Custom initialization
         appDelegate = (iBartAppDelegate *)[ [UIApplication sharedApplication] delegate];
+        
+        if( inputViewController == nil ) {
+            inputViewController = [[InputViewController alloc] initWithNibName:@"InputViewController" bundle:nil];
+            inputViewController.delegate = self;
+        }
+        inputView = [inputViewController view];
+
+        // start this as false
+        userIsInputting = NO;
     }
     return self;
 }
@@ -40,74 +55,111 @@
     
     // subscribe to the notifications for the keyboard
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                            selector:@selector(logKeyboardAction:)
+                                            selector:@selector(keyboardWillShow:)
                                             name:UIKeyboardWillShowNotification
                                             object:nil];
-	
-//	NSMutableDictionary *jsonDict = [NSMutableDictionary dictionaryWithCapacity:0];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardShowed:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
 
 	
 	// Setup the request
 	NSString *htmlTemplateLink = [appDelegate bundlePathForResource:@"HPI" ofType:@"html"];
-    
-    
-    
-    NSLog( @"bundlePathForResource ----> %@", htmlTemplateLink );
-	
-	
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:htmlTemplateLink]];
-	[webView loadRequest:request];	
+	[webView loadRequest:request];	    
+}
 
-//	[self populateJsonAndDeliverfromDict:jsonDict];
-    
-    NSString *filePath = [appDelegate bundlePathForResource:@"script" ofType:@"js"];
 
+#pragma mark - 
+#pragma mark - Debug the keyboard notifications
+- (void)keyboardShowed:(NSNotification *)notification {
     
-    NSLog( @"----> filePath = %@", filePath );
-    
-    if( filePath ) {
-        NSLog( @"----> filePath = %@", filePath );
-        NSString *testJSContents = [NSString stringWithContentsOfFile:filePath];
+    // only respond if the user is not already inputting
+    if( userIsInputting == NO )
+    {
+        userIsInputting = YES;
         
-        if( testJSContents ) {
-//            NSLog( @"========> test.js contents = %@", testJSContents );
-        }
+        NSLog( @"KEYBOARD SHOWED" );
+
+        NSString *currentText = [webView stringByEvaluatingJavaScriptFromString:@"getCurrentText();"];
+        NSLog( @"current text = %@", currentText );
+        
+        NSString *currentFieldTitle = [webView stringByEvaluatingJavaScriptFromString:@"getCurrentFieldTitle();"];
+        NSLog( @"current field title = %@", currentFieldTitle );
+        
+        [inputViewController setText:currentText];
+        [inputViewController setFieldNameLabelText:currentFieldTitle];
+        [self presentModalViewController: inputViewController animated: YES];
     }
     
 }
 
 #pragma mark - 
 #pragma mark - Debug the keyboard notifications
-- (void)logKeyboardAction:(NSNotification *)notification {
-    NSLog( @"KEYBOARD ACTION!!!" );
+- (void)keyboardWillShow:(NSNotification *)notification {
     
+    NSLog( @"KEYBOARD IS COMING!!!" );
 }
 
 #pragma mark -
-#pragma mark - Build the json
+#pragma mark - Run the js method
 
-- (void)populateJsonAndDeliverfromDict:(NSDictionary *)jsonDict
+- (void)runJavascriptFunctionOnPage:(NSString *)jsString
 {
 	if (self.webViewLoaded) {
-		NSString *newJsonString = [jsonDict JSONRepresentation];
-		if (newJsonString != self.jsonString) {
-//			self.jsonString = newJsonString;
-			// execute the script
-//			NSString *theScript = [NSString stringWithFormat:@"loadData(%@);", self.jsonString];	
-            
-			NSString *theScript = @"alert('ADSFSADFASDF');";	
-			[self.webView stringByEvaluatingJavaScriptFromString:theScript];
-		}
+//        NSString *theScript = @"alert('ADSFSADFASDF');";	
+        
+        NSLog( @"----> loaded and RUNNING" );
+        NSString *returnString = [self.webView stringByEvaluatingJavaScriptFromString:jsString];
+        
+        NSLog( @"=======> returned value = %@", returnString );
 	} else {
-		[self performSelector:@selector(populateJsonAndDeliverfromDict:) withObject:jsonDict afterDelay:1.0];
+        
+        NSLog( @"----> webView not loaded yet... waiting and trying again... ");
+		[self performSelector:@selector(runJavascriptFunctionOnPage:) withObject:jsString afterDelay:1.0];
 	}
 }
+
 #pragma mark -
 #pragma mark - webView delegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    
+    NSLog( @"webView has finished loading!!!" );
 	self.webViewLoaded = TRUE;
+}
+
+#pragma mark -
+#pragma mark - InputViewController delegate
+- (void) finishInputAndPassBackText: (NSString *) text 
+{
+    NSLog( @" -------> input view finished!!!" );
+    NSLog( @" -------> TEXT PASSED BACK: %@", text );
+    
+    // scroll back down
+    [webView stringByEvaluatingJavaScriptFromString:@"scroll(0,0);"];
+    
+    // dismiss the inputview
+    [self dismissModalViewControllerAnimated:YES];
+    
+    // declare that user is no longer inputting
+    userIsInputting = NO;
+    
+    // fix the text
+    NSArray* newLineChars = [NSArray arrayWithObjects:@"\\u000A", @"\\u000B",@"\\u000C",@"\\u000D",@"\\u0085",nil];
+    
+    for( NSString* nl in newLineChars )
+        text = [text stringByReplacingOccurrencesOfString: nl withString:@""];
+    
+    NSString *jsString = [[NSString alloc] initWithString:@"commitText( \""];
+    jsString = [jsString stringByAppendingString:text];
+    jsString = [jsString stringByAppendingString:@"\" );"];
+    
+    NSLog( @"trying to run: %@", jsString);
+    // push the text into the currently selected textfield
+    [self runJavascriptFunctionOnPage:[[NSString alloc] initWithString:jsString]];
 }
 
 
@@ -124,6 +176,7 @@
 
 
 - (void)dealloc {
+    [inputViewController release];
 	[webView release];
 	[jsonString release];
 	[appDelegate release];
